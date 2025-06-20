@@ -2,7 +2,7 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using SIGEBI.Domain.Interfaces; // Solo debe quedar esta
+using SIGEBI.Domain.Interfaces.Repository;
 using SIGEBI.Persistence.Context;
 using SIGEBI.Persistence.Repositories;
 

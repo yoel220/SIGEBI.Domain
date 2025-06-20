@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using SIGEBI.Domain.Entities;
-using SIGEBI.Domain.Interfaces;
+using SIGEBI.Domain.Interfaces.Repository;
 
 namespace SIGEBI.API.Controllers
 {

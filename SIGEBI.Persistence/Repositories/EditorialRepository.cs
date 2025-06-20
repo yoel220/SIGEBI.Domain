@@ -1,51 +1,41 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using SIGEBI.Domain.Entities;
-using SIGEBI.Domain.Interfaces;
+using SIGEBI.Domain.Interfaces.Repository;
 using SIGEBI.Persistence.Context;
 
 namespace SIGEBI.Persistence.Repositories
 {
-    public class EditorialRepository : IEditorialRepository
+    public class EditorialRepository : GeneryRepository<Editorial>, IEditorialRepository
     {
         private readonly AppDbContext _context;
-
-        public EditorialRepository(AppDbContext context) => _context = context;
-
-        public async Task<Editorial?> GetByIdAsync(int id) =>
-            await _context.Editoriales.FindAsync(id);
-
-        public async Task<IEnumerable<Editorial>> GetAllAsync() =>
-            await _context.Editoriales.ToListAsync();
-
-        public async Task<Editorial> AddAsync(Editorial editorial)
+        public EditorialRepository(AppDbContext context) : base(context)
         {
-            await _context.Editoriales.AddAsync(editorial);
-            await _context.SaveChangesAsync();
-            return editorial; // 👈 Retorna la entidad agregada
+            _context = context;
         }
 
-        public async Task UpdateAsync(Editorial editorial)
-        {
-            _context.Editoriales.Update(editorial);
-            await _context.SaveChangesAsync();
-        }
 
-        public async Task DeleteAsync(int id)
-        {
-            var editorial = await GetByIdAsync(id);
-            if (editorial != null)
-            {
-                _context.Editoriales.Remove(editorial);
-                await _context.SaveChangesAsync();
-            }
-        }
-
-        // 👇 Implementación del nuevo método de la interfaz
         public async Task<IEnumerable<Libro>> GetLibrosByEditorialAsync(int editorialId)
         {
-            return await _context.Libros
-                .Where(l => l.EditorialId == editorialId)
-                .ToListAsync();
+            try
+            {
+               
+                var editorial = await _context.Editoriales.FindAsync(editorialId);
+                if (editorial is null)
+                {
+                    throw new KeyNotFoundException($"No se encontró la editorial con ID {editorialId}");
+                }
+               
+                var libros = await _context.Libros
+                    .Where(libro => libro.EditorialId == editorialId)
+                    .ToListAsync();
+                return libros;
+
+            }
+            catch (Exception ex)
+            {
+
+                throw new Exception("Error al obtener los libros por editorial", ex);
+            }
         }
     }
 }

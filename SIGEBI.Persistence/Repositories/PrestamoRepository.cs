@@ -1,61 +1,35 @@
 ﻿using SIGEBI.Domain.Entities;
-using SIGEBI.Domain.Interfaces;
 using SIGEBI.Persistence.Context;
 using Microsoft.EntityFrameworkCore;
+using SIGEBI.Domain.Interfaces.Repository;
 
 namespace SIGEBI.Persistence.Repositories
 {
-    public class PrestamoRepository : IPrestamoRepository
+    public class PrestamoRepository : GeneryRepository<Prestamo>, IPrestamoRepository
     {
         private readonly AppDbContext _context;
-
-        public PrestamoRepository(AppDbContext context)
+        public PrestamoRepository(AppDbContext context) : base(context)
         {
-            _context = context;
+            _context = context ?? throw new ArgumentNullException(nameof(context), "El contexto no puede ser nulo");
         }
 
-        public async Task<IEnumerable<Prestamo>> GetAllAsync()
+        public async Task<IEnumerable<Prestamo>> GetActiveLoansAsync()
         {
-            return await _context.Prestamos.ToListAsync();
-        }
-
-        public async Task<Prestamo?> GetByIdAsync(int id)
-        {
-            return await _context.Prestamos.FindAsync(id);
-        }
-
-        public async Task<Prestamo> AddAsync(Prestamo prestamo)
-        {
-            _context.Prestamos.Add(prestamo);
-            await _context.SaveChangesAsync();
-            return prestamo;
-        }
-
-        public async Task UpdateAsync(Prestamo prestamo)
-        {
-            _context.Prestamos.Update(prestamo);
-            await _context.SaveChangesAsync();
-        }
-
-        public async Task DeleteAsync(int id)
-        {
-            var prestamo = await _context.Prestamos.FindAsync(id);
-            if (prestamo != null)
+            try
             {
-                _context.Prestamos.Remove(prestamo);
-                await _context.SaveChangesAsync();
+                return await _context.Prestamos
+                                    .Include(p => p.Libro)
+                                    .Include(p => p.Usuario)
+                                    .Where(p => p.FechaDevolucion == null || p.FechaDevolucion > DateTime.Now)
+                                    .ToListAsync();
             }
-        }
-
-        public async Task ReturnBookAsync(int id)
-        {
-            var prestamo = await _context.Prestamos.FindAsync(id);
-            if (prestamo != null)
+            catch (Exception ex)
             {
-                prestamo.FechaDevolucion = DateTime.Now;
-                _context.Prestamos.Update(prestamo);
-                await _context.SaveChangesAsync();
+                // Manejo de excepciones, logging, etc.
+                throw new Exception("Error al obtener los préstamos activos", ex);
+
             }
+
         }
     }
 }

@@ -5,11 +5,13 @@ VisualStudioVersion = 17.14.36025.13
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SIGEBI.Persistence", "SIGEBI.Persistence\SIGEBI.Persistence.csproj", "{8878DBDB-EC3A-4F2D-B123-E553539CA68C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SIGEBI.Domain", "SIGEBI.Domain\SIGEBI.Domain.csproj", "{F8E79A66-95F5-464E-BC1A-0AA9767A5666}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SIGEBI.API", "SIGEBI.API\SIGEBI.API.csproj", "{D476B229-287B-4182-A463-000186611285}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SIGEBI.Presentation", "SIGEBI.Presentation\SIGEBI.Presentation.csproj", "{EB64D13A-0BCB-4C22-BCB2-2E57DA41A617}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sigebi.Domains", "Sigebi.Domains\Sigebi.Domains.csproj", "{8250BBEB-3BAD-4494-85CC-5E0DD574D047}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sigebi.Aplication", "Sigebi.Aplication\Sigebi.Aplication.csproj", "{00937877-3711-47D3-A80B-6C2C6FE99106}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sigebii.API", "Sigebii.API\Sigebii.API.csproj", "{8B82A6D7-E5D1-48E6-99AE-4B5E79D141E2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,18 +23,22 @@ Global
 		{8878DBDB-EC3A-4F2D-B123-E553539CA68C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8878DBDB-EC3A-4F2D-B123-E553539CA68C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8878DBDB-EC3A-4F2D-B123-E553539CA68C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F8E79A66-95F5-464E-BC1A-0AA9767A5666}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F8E79A66-95F5-464E-BC1A-0AA9767A5666}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F8E79A66-95F5-464E-BC1A-0AA9767A5666}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F8E79A66-95F5-464E-BC1A-0AA9767A5666}.Release|Any CPU.Build.0 = Release|Any CPU
-		{D476B229-287B-4182-A463-000186611285}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D476B229-287B-4182-A463-000186611285}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D476B229-287B-4182-A463-000186611285}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D476B229-287B-4182-A463-000186611285}.Release|Any CPU.Build.0 = Release|Any CPU
 		{EB64D13A-0BCB-4C22-BCB2-2E57DA41A617}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{EB64D13A-0BCB-4C22-BCB2-2E57DA41A617}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EB64D13A-0BCB-4C22-BCB2-2E57DA41A617}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EB64D13A-0BCB-4C22-BCB2-2E57DA41A617}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8250BBEB-3BAD-4494-85CC-5E0DD574D047}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8250BBEB-3BAD-4494-85CC-5E0DD574D047}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8250BBEB-3BAD-4494-85CC-5E0DD574D047}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8250BBEB-3BAD-4494-85CC-5E0DD574D047}.Release|Any CPU.Build.0 = Release|Any CPU
+		{00937877-3711-47D3-A80B-6C2C6FE99106}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{00937877-3711-47D3-A80B-6C2C6FE99106}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{00937877-3711-47D3-A80B-6C2C6FE99106}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{00937877-3711-47D3-A80B-6C2C6FE99106}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8B82A6D7-E5D1-48E6-99AE-4B5E79D141E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8B82A6D7-E5D1-48E6-99AE-4B5E79D141E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8B82A6D7-E5D1-48E6-99AE-4B5E79D141E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8B82A6D7-E5D1-48E6-99AE-4B5E79D141E2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

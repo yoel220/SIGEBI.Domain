@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using SIGEBI.Domain.Entities;
 
+
 namespace SIGEBI.Persistence.Context
 {
     public class AppDbContext : DbContext
@@ -18,20 +19,7 @@ namespace SIGEBI.Persistence.Context
         public DbSet<Rol> Roles { get; set; }
         public DbSet<Usuario> Usuarios { get; set; }
 
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        {
-            if (!optionsBuilder.IsConfigured)
-            {
-                optionsBuilder.UseSqlServer("Server=YOELMIS;Database=SIGEBI;User Id=sa;Password=Sariel123456;TrustServerCertificate=True;");
-            }
-        }
 
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
-        {
-            modelBuilder.Entity<LibroAutor>()
-                .HasKey(la => new { la.LibroId, la.AutorId });
 
-            // Configuraciones adicionales si son necesarias
-        }
     }
 }
