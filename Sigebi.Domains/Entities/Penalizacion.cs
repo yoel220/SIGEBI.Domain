@@ -3,6 +3,8 @@ namespace SIGEBI.Domain.Entities
 {
     public class Penalizacion : AuditEntity
     {
+        public Guid id;
+
         public required int UsuarioId { get; set; }
         public required Usuario Usuario { get; set; }
 

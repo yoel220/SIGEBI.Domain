@@ -2,6 +2,8 @@
 {
     public class LibroAutor
     {
+        public object id;
+
         public int LibroId { get; set; }
         public Libro? Libro { get; set; }
 
