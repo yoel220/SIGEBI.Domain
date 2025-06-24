@@ -1,0 +1,39 @@
+@model IEnumerable<SIGEBI.Web.Models.Editorial>
+
+<h1 class="text-center">Listado de Editoriales</h1>
+
+<div class="container mt-4">
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nombre</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            @if (Model != null && Model.Any())
+            {
+                foreach (var editorial in Model)
+                {
+                    <tr>
+                        <td>@editorial.id</td>
+                        <td>@editorial.nombre</td>
+                        <td>
+                            <a href="/Editoriales/Edit/@editorial.id" class="btn btn-sm btn-primary">Editar</a>
+                            <a href="/Editoriales/Delete/@editorial.id" class="btn btn-sm btn-danger">Eliminar</a>
+                        </td>
+                    </tr>
+                }
+            }
+            else
+            {
+                <tr>
+                    <td colspan="3" class="text-center">No hay editoriales registradas.</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    <a href="/Editoriales/Create" class="btn btn-success">Agregar Editorial</a>
+</div>

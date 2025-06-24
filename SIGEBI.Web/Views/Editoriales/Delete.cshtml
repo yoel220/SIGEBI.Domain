@@ -1,0 +1,11 @@
+@model SIGEBI.Web.Models.Editorial
+
+<h1>Eliminar Editorial</h1>
+
+<p>¿Está seguro que desea eliminar la editorial: <strong>@Model.nombre</strong>?</p>
+
+<form method="post">
+    <input type="hidden" asp-for="id" />
+    <button type="submit" class="btn btn-danger">Eliminar</button>
+    <a href="/Editoriales" class="btn btn-secondary">Cancelar</a>
+</form>

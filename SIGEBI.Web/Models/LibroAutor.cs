@@ -1,0 +1,1 @@
+namespace SIGEBI.Web.Models { public class LibroAutor { public int IdLibro { get; set; } public int IdAutor { get; set; } } }

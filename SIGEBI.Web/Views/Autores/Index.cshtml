@@ -1,0 +1,41 @@
+@model IEnumerable<SIGEBI.Web.Models.Autor>
+
+<div class="container mt-5">
+    <h1 class="text-center mb-4">Listado de Autores</h1>
+
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nombre</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            @if (Model != null && Model.Any())
+            {
+                foreach (var autor in Model)
+                {
+                    <tr>
+                        <td>@autor.id</td>
+                        <td>@autor.nombre</td>
+                        <td>
+                            <a href="/Autores/Edit/@autor.id" class="btn btn-sm btn-primary">Editar Autor</a>
+                            <a href="/Autores/Delete/@autor.id" class="btn btn-sm btn-danger">Eliminar Autor</a>
+                        </td>
+                    </tr>
+                }
+            }
+            else
+            {
+                <tr>
+                    <td colspan="3" class="text-center">No hay autores registrados.</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    <div class="mt-3">
+        <a href="/Autores/Create" class="btn btn-success">Agregar Autor</a>
+    </div>
+</div>

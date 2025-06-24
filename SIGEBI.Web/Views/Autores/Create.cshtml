@@ -1,0 +1,14 @@
+@model SIGEBI.Web.Models.Autor
+
+<h1>Agregar Autor</h1>
+
+<form asp-action="Create" method="post">
+    <div class="form-group">
+        <label for="nombre">Nombre</label>
+        <input type="text" class="form-control" id="nombre" name="nombre" required />
+    </div>
+
+    <br />
+    <button type="submit" class="btn btn-success">Guardar</button>
+    <a href="/Autores" class="btn btn-secondary">Cancelar</a>
+</form>

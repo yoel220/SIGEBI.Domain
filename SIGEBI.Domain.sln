@@ -5,13 +5,13 @@ VisualStudioVersion = 17.14.36025.13
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SIGEBI.Persistence", "SIGEBI.Persistence\SIGEBI.Persistence.csproj", "{8878DBDB-EC3A-4F2D-B123-E553539CA68C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SIGEBI.Presentation", "SIGEBI.Presentation\SIGEBI.Presentation.csproj", "{EB64D13A-0BCB-4C22-BCB2-2E57DA41A617}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sigebi.Domains", "Sigebi.Domains\Sigebi.Domains.csproj", "{8250BBEB-3BAD-4494-85CC-5E0DD574D047}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sigebi.Aplication", "Sigebi.Aplication\Sigebi.Aplication.csproj", "{00937877-3711-47D3-A80B-6C2C6FE99106}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sigebii.API", "Sigebii.API\Sigebii.API.csproj", "{8B82A6D7-E5D1-48E6-99AE-4B5E79D141E2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SIGEBI.Web", "SIGEBI.Web\SIGEBI.Web.csproj", "{A71C20C1-2288-E1C7-3C3D-DEDF66839D64}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,10 +23,6 @@ Global
 		{8878DBDB-EC3A-4F2D-B123-E553539CA68C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8878DBDB-EC3A-4F2D-B123-E553539CA68C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8878DBDB-EC3A-4F2D-B123-E553539CA68C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{EB64D13A-0BCB-4C22-BCB2-2E57DA41A617}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{EB64D13A-0BCB-4C22-BCB2-2E57DA41A617}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{EB64D13A-0BCB-4C22-BCB2-2E57DA41A617}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{EB64D13A-0BCB-4C22-BCB2-2E57DA41A617}.Release|Any CPU.Build.0 = Release|Any CPU
 		{8250BBEB-3BAD-4494-85CC-5E0DD574D047}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{8250BBEB-3BAD-4494-85CC-5E0DD574D047}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8250BBEB-3BAD-4494-85CC-5E0DD574D047}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -39,6 +35,10 @@ Global
 		{8B82A6D7-E5D1-48E6-99AE-4B5E79D141E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8B82A6D7-E5D1-48E6-99AE-4B5E79D141E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8B82A6D7-E5D1-48E6-99AE-4B5E79D141E2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A71C20C1-2288-E1C7-3C3D-DEDF66839D64}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A71C20C1-2288-E1C7-3C3D-DEDF66839D64}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A71C20C1-2288-E1C7-3C3D-DEDF66839D64}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A71C20C1-2288-E1C7-3C3D-DEDF66839D64}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,0 +1,12 @@
+@model SIGEBI.Web.Models.Editorial
+
+<h1>Editar Editorial</h1>
+
+<form method="post">
+    <input type="hidden" asp-for="id" />
+    <div class="form-group">
+        <label>Nombre</label>
+        <input asp-for="nombre" class="form-control" />
+    </div>
+    <button type="submit" class="btn btn-primary">Guardar Cambios</button>
+</form>

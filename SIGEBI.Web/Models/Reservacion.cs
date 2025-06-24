@@ -1,0 +1,1 @@
+namespace SIGEBI.Web.Models { public class Reservacion { public int Id { get; set; } public int IdUsuario { get; set; } public int IdLibro { get; set; } public string Estado { get; set; } } }

@@ -1,0 +1,16 @@
+@model SIGEBI.Web.Models.Autor
+
+<h1>Editar Autor</h1>
+
+<form asp-action="Edit" method="post">
+    <input type="hidden" name="id" value="@Model.id" />
+
+    <div class="form-group">
+        <label for="nombre">Nombre</label>
+        <input type="text" class="form-control" id="nombre" name="nombre" value="@Model.nombre" required />
+    </div>
+
+    <br />
+    <button type="submit" class="btn btn-primary">Guardar Cambios</button>
+    <a href="/Autores" class="btn btn-secondary">Cancelar</a>
+</form>

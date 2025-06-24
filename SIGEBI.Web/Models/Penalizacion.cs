@@ -1,0 +1,1 @@
+namespace SIGEBI.Web.Models { public class Penalizacion { public int Id { get; set; } public int IdUsuario { get; set; } public int IdPrestamo { get; set; } public decimal Monto { get; set; } public string Estado { get; set; } } }
